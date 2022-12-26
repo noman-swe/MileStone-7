@@ -9,4 +9,4 @@ fetch('https://jsonplaceholder.typicode.com/todos/1')
 console.log(3333333);
 console.log(4444444);
 
-// fetch taw emn asyncronus hisheb e kaj kore
+// fetch taw emn asynchronous hisheb e kaj kore
