@@ -1,0 +1,5 @@
+38-2 How Browser works, DOM tree, Render Tree
+
+kivabe browser e kaj kore HTML and css ?
+
+ei sob er jonne tree..
