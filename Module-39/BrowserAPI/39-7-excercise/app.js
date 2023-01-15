@@ -1,7 +1,18 @@
+// load or display local storage cart
+const displayLocalStorageCart = () => {
+    const cart = getCart();
+    for(const productName in cart){
+        displayProduct(productName);
+    }
+}
+
 const addItem = () => {
     const productField = document.getElementById('product-name');
     const productName = productField.value;
     // console.log(productName);
+    if (!productName) {
+        return;
+    }
 
     // display Products
     displayProduct(productName);
@@ -34,8 +45,22 @@ const getCart = () => {
 
 const addProductToCart = productName => {
     const cart = getCart();
-    cart[productName] = 1; 
+    // cart[productName] = 1;
+    if(cart[productName]){
+        cart[productName] = cart[productName] + 1;
+    }else{
+        cart[productName] = 1;
+    }
     console.log(cart);
     const cartStringified = JSON.stringify(cart);
     localStorage.setItem('cart', cartStringified);
 }
+
+// place order
+const placeOrder = () => {
+    document.getElementById('products').textContent = '';
+    localStorage.removeItem('cart');
+}
+
+// display LocalStorage existing items
+displayLocalStorageCart();
