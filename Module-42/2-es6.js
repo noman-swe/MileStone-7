@@ -9,7 +9,7 @@ const student = {
 const about = `My name is ${student.name} and my age is ${student.age} and my lucky number is ${numbers[2]} and my favorite movie is ${student.movies[1]}`;
 console.log(about);
 
-// 2.array function
+// 2.arrow function
 const getFiftyFive = () => 55; //without perameter
 const addSixtyFive = num => num + 65; //with a perameter
 const isEven = x => x % 2 == 0; //find even number
@@ -20,7 +20,7 @@ const doMath = (num1, num2) => {
 }
 
 // spread operator
-// const newNumbers = numbers;
+const newNumbers1 = numbers;
 const newNumbers = [...numbers];
 
 // create a new array from an older array and add ana element
