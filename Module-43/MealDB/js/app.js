@@ -2,7 +2,7 @@ const loadMealsSrchBtn = document.getElementById('load-meals-btn');
 const inputField = document.getElementById('txt-field');
 
 inputField.addEventListener('keypress', function (event) {
-    if (event.keyCode == 13) {
+    if (event.key === 'Enter') {
         loadMealsSrchBtn.click();
     }
 });
